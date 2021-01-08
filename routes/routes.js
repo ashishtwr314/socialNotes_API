@@ -1,5 +1,8 @@
 const controller = require("../controller/controller.js");
 module.exports = (app) => {
+  app.get("/", (req, res) => {
+    res.send("WELCOME TO SOCIAL NOTES API");
+  });
   app.get("/get_html", controller.getHtml);
 
   app.post("/post_html", controller.postHtml);
